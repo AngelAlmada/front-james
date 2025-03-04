@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { MapPin, Phone, Mail } from "lucide-react"; // Importamos iconos
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const { t } = useTranslation(); // Hook para traducción
@@ -17,11 +18,11 @@ export function Footer() {
           </p>
           <p className="flex items-center gap-2 mt-2">
             <Phone className="w-5 h-5 text-gray-600" />
-            +52 668 234 5785
+            <a href="tel:+526682345785" className="hover:underline">+52 668 234 5785</a>
           </p>
           <p className="flex items-center gap-2 mt-2">
             <Mail className="w-5 h-5 text-gray-600" />
-            hola@james-sharples.org
+            <a href="mailto:hola@james-sharples.org" className="hover:underline">hola@james-sharples.org</a>
           </p>
         </div>
 
@@ -30,11 +31,11 @@ export function Footer() {
           <h3 className="text-lg font-semibold mb-3">{t("footer_explore")}</h3>
           <hr className="w-12 border-gray-500 mb-4" />
           <ul className="space-y-2">
-            <li><a href="/" className="hover:underline">{t("footer_home")}</a></li>
-            <li><a href="/about" className="hover:underline">{t("footer_about")}</a></li>
-            <li><a href="/gallery" className="hover:underline">{t("footer_gallery")}</a></li>
-            <li><a href="/events" className="hover:underline">{t("footer_events")}</a></li>
-            <li><a href="/news" className="hover:underline">{t("footer_news")}</a></li>
+            <li><Link to="/" className="hover:underline">{t("footer_home")}</Link></li>
+            <li><Link to="/about" className="hover:underline">{t("footer_about")}</Link></li>
+            <li><Link to="/gallery" className="hover:underline">{t("footer_gallery")}</Link></li>
+            <li><Link to="/events" className="hover:underline">{t("footer_events")}</Link></li>
+            <li><Link to="/news" className="hover:underline">{t("footer_news")}</Link></li>
           </ul>
         </div>
 
@@ -43,11 +44,11 @@ export function Footer() {
           <h3 className="text-lg font-semibold mb-3">{t("footer_policies")}</h3>
           <hr className="w-12 border-gray-500 mb-4" />
           <ul className="space-y-2">
-            <li><a href="/foundation" className="hover:underline">{t("footer_foundation")}</a></li>
-            <li><a href="/shipping-info" className="hover:underline">{t("footer_shipping")}</a></li>
-            <li><a href="/privacy-policy" className="hover:underline">{t("footer_privacy")}</a></li>
-            <li><a href="/terms" className="hover:underline">{t("footer_terms")}</a></li>
-            <li><a href="/contact" className="hover:underline">{t("footer_contact_link")}</a></li>
+            <li><Link to="/foundation" className="hover:underline">{t("footer_foundation")}</Link></li>
+            <li><Link to="/delivery-info" className="hover:underline">{t("footer_shipping")}</Link></li>
+            <li><Link to="/privacy-policy" className="hover:underline">{t("footer_privacy")}</Link></li>
+            <li><Link to="/terms" className="hover:underline">{t("footer_terms")}</Link></li>
+            <li><Link to="/contact" className="hover:underline">{t("footer_contact_link")}</Link></li>
           </ul>
         </div>
       </div>
