@@ -14,22 +14,22 @@ export function Navbar() {
   };
 
   return (
-    <nav className="bg-white font-roboto text-xl shadow-md fixed top-0 left-0 w-full z-50">
+    <nav className="font-roboto text-xl shadow-md fixed top-0 left-0 w-full z-50 bg-white/20 backdrop-blur-md">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 z-50">
           <img
-            src="/src/assets/logo.png"
+            src="/images/logo.png"
             alt="logo"
-            className="max-w-[120px] h-auto cursor-pointer"
-            style={{ filter: "invert(1)" }} // Para que sea visible en fondo blanco
+            className="max-w-[120px] sm:max-w-[160px] md:max-w-[200px] lg:max-w-[250px] h-auto cursor-pointer"
+            style={{ filter: "invert(1)" }} // Para visibilidad en fondo blanco
           />
         </Link>
 
-        {/* Botón de menú en móviles (SE ESCONDE SI EL MENÚ ESTÁ ABIERTO) */}
+        {/* Botón de menú en móviles */}
         {!menuOpen && (
           <button
-            className="sm:hidden text-black z-50 relative"
+            className="sm:hidden text-white z-50 relative"
             onClick={() => setMenuOpen(true)}
           >
             <Menu size={30} />
@@ -37,18 +37,15 @@ export function Navbar() {
         )}
 
         {/* Menú de navegación en pantallas grandes */}
-        <div className="hidden sm:flex items-center gap-6">
-          <Link to="/" className="hover:text-gray-600 transition-all">
+        <div className="hidden sm:flex items-center gap-10">
+          <Link to="/" className="relative text-black transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-slate-700 after:left-0 after:bottom-0 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">
             {t("home")}
           </Link>
-          <Link to="/gallery" className="hover:text-gray-600 transition-all">
-            {t("gallery")}
-          </Link>
-          <Link to="/about" className="hover:text-gray-600 transition-all">
-            {t("about")}
-          </Link>
-          <Link to="/contact" className="hover:text-gray-600 transition-all">
+          <Link to="/contact" className="relative text-black transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-slate-700 after:left-0 after:bottom-0 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">
             {t("contact")}
+          </Link>
+          <Link to="/gallery" className="relative text-black transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-slate-700 after:left-0 after:bottom-0 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">
+            {t("gallery")}
           </Link>
 
           {/* Selector de idioma */}
@@ -62,7 +59,6 @@ export function Navbar() {
             <option value="fr">🇫🇷 Français</option>
           </select>
         </div>
-
       </div>
 
       {/* Menú hamburguesa en móviles */}
@@ -76,32 +72,16 @@ export function Navbar() {
             <X size={30} />
           </button>
 
-          <Link
-            to="/"
-            className="text-gray-900 text-2xl hover:text-gray-600 transition-all"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/" className="text-gray-900 text-2xl hover:text-gray-600 transition-all" onClick={() => setMenuOpen(false)}>
             {t("home")}
           </Link>
-          <Link
-            to="/gallery"
-            className="text-gray-900 text-2xl hover:text-gray-600 transition-all"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/gallery" className="text-gray-900 text-2xl hover:text-gray-600 transition-all" onClick={() => setMenuOpen(false)}>
             {t("gallery")}
           </Link>
-          <Link
-            to="/about"
-            className="text-gray-900 text-2xl hover:text-gray-600 transition-all"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/about" className="text-gray-900 text-2xl hover:text-gray-600 transition-all" onClick={() => setMenuOpen(false)}>
             {t("about")}
           </Link>
-          <Link
-            to="/contact"
-            className="text-gray-900 text-2xl hover:text-gray-600 transition-all"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/contact" className="text-gray-900 text-2xl hover:text-gray-600 transition-all" onClick={() => setMenuOpen(false)}>
             {t("contact")}
           </Link>
 
@@ -117,7 +97,6 @@ export function Navbar() {
           </select>
         </div>
       )}
-
     </nav>
   );
 }

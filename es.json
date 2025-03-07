@@ -1,8 +1,8 @@
 {
   "home": "Inicio",
-  "gallery": "Galería",
+  "gallery": "Comprar",
   "about": "Sobre mí",
-  "contact": "Contacto",
+  "contact": "Contactame",
   "language": "Idioma",
   "about_title": "¿Quién es James?",
   "about_text": "Nací en Philadelphia, Pennsylvania. Desde que tengo memoria, he sentido una conexión profunda con la tierra y con la vida que me rodea. La pintura y la cerámica se convirtieron en mis lenguajes...",
@@ -44,5 +44,10 @@
   "faq_title": "Preguntas Frecuentes",
   "faq_question_1": "¿Cómo puedo rastrear mi pedido?",
   "faq_question_2": "¿Qué pasa si mi obra llega dañada?",
-  "faq_question_3": "¿Realizan envíos internacionales?"
+  "faq_question_3": "¿Realizan envíos internacionales?",
+    "trayectoria": "•Trayectoria",
+    "catalogo": "•Catálogo",
+    "noticias": "•Noticias",
+    "comunidad": "•Comunidad",
+    "frase_bajo_enlaces": "❝La belleza no esta en la obra en si, en los objetos, sino en la mirada que la contempla❞" 
 }

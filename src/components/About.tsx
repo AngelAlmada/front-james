@@ -34,7 +34,7 @@ export function About() {
         <div className="relative w-full max-w-4xl">
           {/* Imagen principal */}
           <motion.img
-            src="/public/images/James.png"
+            src="images/James.png"
             alt="James Sharples"
             className="w-full md:max-h-[450px] md:w-auto rounded-lg shadow-lg object-cover"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -57,7 +57,7 @@ export function About() {
             {/* Firma con imagen pequeña */}
             <div className="mt-6 flex items-center gap-4">
               <img
-                src="/public/images/James.png"
+                src="images/James.png"
                 alt="James Sharples"
                 className="w-12 h-12 rounded-full"
               />
